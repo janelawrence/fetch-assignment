@@ -10,7 +10,7 @@ title: Receipts Scanned
 erDiagram
     User ||--o{ Receipt : uploads
     Receipt ||--|{ Receipt-REWARD-ITEM : contains
-    Receipt ||--|{RewardsStatus: has}
+    Receipt ||--|{ RewardsStatus: has
     BRAND }|..|{ Receipt-REWARD-ITEM : has
 
     User {
