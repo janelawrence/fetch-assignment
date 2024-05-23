@@ -19,7 +19,7 @@ erDiagram
         varchar(50) signUpSource
         timestamp createdDate
         timestamp lastLogin
-        str role 'CONSUMER'
+        str role "CONSUMER"
         boolean active
     }
 
