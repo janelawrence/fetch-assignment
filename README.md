@@ -49,7 +49,7 @@ erDiagram
     }
 
     Brand {
-        int _id PK,
+        int _id PK
         str barcode
         str category
         str categoryCode
@@ -73,7 +73,7 @@ erDiagram
         float itemPrice
         boolean needsFetchReview
         boolean preventTargetGapPoints
-        int quantityPurchased,
+        int quantityPurchased
         int userFlaggedBarcode
         boolean userFlaggedNewItem
         float userFlaggedPrice
