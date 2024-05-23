@@ -9,9 +9,9 @@ title: Receipts Scanned
 ---
 erDiagram
     User ||--o{ Receipt : uploads
-    Receipt ||--|{ Receipt-REWARD-ITEM : contains
+    Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|{ RewardsStatus: has
-    BRAND }|..|{ Receipt-REWARD-ITEM : has
+    Brand }|..|{ ReceiptRewardItem : has
 
     User {
         int _id PK
