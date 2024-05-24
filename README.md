@@ -9,6 +9,7 @@ title: Receipts Scanned
 ---
 erDiagram
     User ||--o{ Receipt : uploads
+    User ||--|{ UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|{ RewardsStatus: has
     Brand }|..|{ ReceiptRewardItem : has
@@ -26,7 +27,7 @@ erDiagram
     Receipt {
         string(255) _id PK
         int bonusPointsEarned
-        str bonusPointsEarnedReason
+        text bonusPointsEarnedReason
         int pointsEarned
         int purchasedItemCount
         float totalSpent
@@ -50,19 +51,19 @@ erDiagram
 
     UserRole {
         enum CONSUMER
-        enum FETCH-STAFF
+        enum FETCH_STAFF
     }
 
     Brand {
         string(255) _id PK
-        str barcode
-        str category
-        str categoryCode
-        str name
+        string(255) barcode
+        string(255) category
+        string(255) categoryCode
+        string(255) name
         boolean topBrand
         string(255) cpg_id_oid
         text cpg_ref
-        str brandCode
+        string(255) brandCode
     }
 
     ReceiptRewardItem {
@@ -73,7 +74,7 @@ erDiagram
         String(255) pointsPayerId
         String(255) rewardsProductPartnerId
         String(255) metabriteCampaignId
-        str description
+        text description
         float finalPrice
         float itemPrice
         boolean needsFetchReview
@@ -83,16 +84,16 @@ erDiagram
         boolean userFlaggedNewItem
         float userFlaggedPrice
         int userFlaggedQuantity
-        str needsFetchReviewReason
-        str pointsNotAwardedReason
-        str rewardsGroup
-        str userFlaggedDescription
-        str originalMetaBriteBarcode
-        str originalMetaBriteDescription
-        str competitorRewardsGroup
+        string(255) needsFetchReviewReason
+        string(255) pointsNotAwardedReason
+        string(255) rewardsGroup
+        string(255) userFlaggedDescription
+        string(255) originalMetaBriteBarcode
+        string(255) originalMetaBriteDescription
+        string(255) competitorRewardsGroup
         float discountedItemPrice
-        str originalReceiptItemText
-        str itemNumber
+        text originalReceiptItemText
+        string(255) itemNumber
         int originalMetaBriteQuantityPurchased
         float pointsEarned
         float targetPrice
