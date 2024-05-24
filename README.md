@@ -60,8 +60,8 @@ erDiagram
         str categoryCode
         str name
         boolean topBrand
-        string(255) cpg.id.oid
-        text cpg.ref
+        string(255) cpg_id_oid
+        text cpg_ref
         str brandCode
     }
 
