@@ -1,7 +1,7 @@
 # fetch-assignment
 
 
-# ER Diagram
+### 1. ER Diagram
 
 ```mermaid
 ---
@@ -104,3 +104,5 @@ erDiagram
         float priceAfterCoupon
     }
 ```
+### 2. All codes and descriptions used to answer part 1 - part 4 are stored in `analysis.ipynb`
+
