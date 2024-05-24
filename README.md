@@ -14,23 +14,23 @@ erDiagram
     Brand }|..|{ ReceiptRewardItem : has
 
     User {
-        int _id PK
+        string(255) _id PK
         varchar(20) state
         varchar(50) signUpSource
         timestamp createdDate
         timestamp lastLogin
-        str role "CONSUMER"
+        UserRole role
         boolean active
     }
 
     Receipt {
-        int _id PK
+        string(255) _id PK
         int bonusPointsEarned
         str bonusPointsEarnedReason
         int pointsEarned
         int purchasedItemCount
         float totalSpent
-        int userId
+        string(255)  userId
         RewardsStatus rewardsReceiptStatus
         timestamp createDate
         timestamp dateScanned
@@ -48,33 +48,38 @@ erDiagram
         enum FLAGGED
     }
 
+    UserRole {
+        enum CONSUMER
+        enum FETCH-STAFF
+    }
+
     Brand {
-        int _id PK
+        string(255) _id PK
         str barcode
         str category
         str categoryCode
         str name
         boolean topBrand
-        int cpg_id
-        str cpg_ref
+        string(255) cpg.id.oid
+        text cpg.ref
         str brandCode
     }
 
     ReceiptRewardItem {
-        str barcode
-        str brandCode
-        int receiptId
-        int partnerItemId
-        int pointsPayerId
-        str rewardsProductPartnerId
-        str metabriteCampaignId
+        String(255) barcode
+        String(255) brandCode
+        String(255) receiptId
+        String(255) partnerItemId
+        String(255) pointsPayerId
+        String(255) rewardsProductPartnerId
+        String(255) metabriteCampaignId
         str description
         float finalPrice
         float itemPrice
         boolean needsFetchReview
         boolean preventTargetGapPoints
         int quantityPurchased
-        int userFlaggedBarcode
+        String(255) userFlaggedBarcode
         boolean userFlaggedNewItem
         float userFlaggedPrice
         int userFlaggedQuantity
