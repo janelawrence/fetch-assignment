@@ -9,7 +9,7 @@ title: Receipts Scanned
 ---
 erDiagram
     User ||--o{ Receipt : uploads
-    User ||--||{ UserRole: has
+    User ||--|| UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|{ RewardsStatus: has
     Brand }|..|{ ReceiptRewardItem : has
