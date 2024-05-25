@@ -73,7 +73,7 @@ erDiagram
         String(255) partnerItemId
         String(255) pointsPayerId
         String(255) userId
-        timestamp   dateScanned date the receipt is scanned
+        timestamp   dateScanned "date the receipt is scanned"
         String(255) rewardsProductPartnerId
         String(255) metabriteCampaignId
         text description
