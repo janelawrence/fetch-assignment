@@ -9,7 +9,7 @@ title: Receipts Scanned
 ---
 erDiagram
     User ||--o{ Receipt : uploads
-    User ||--|{ UserRole: has
+    User ||--||{ UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|{ RewardsStatus: has
     Brand }|..|{ ReceiptRewardItem : has
@@ -31,7 +31,7 @@ erDiagram
         int pointsEarned
         int purchasedItemCount
         float totalSpent
-        string(255)  userId
+        string(255)  userId FK
         RewardsStatus rewardsReceiptStatus
         timestamp createDate
         timestamp dateScanned
@@ -69,7 +69,7 @@ erDiagram
     ReceiptRewardItem {
         String(255) barcode
         String(255) brandCode
-        String(255) receiptId
+        String(255) receiptId FK
         String(255) partnerItemId
         String(255) pointsPayerId
         String(255) rewardsProductPartnerId
