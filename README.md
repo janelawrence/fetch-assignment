@@ -11,7 +11,7 @@ erDiagram
     User ||--o{ Receipt : uploads
     User ||--|| UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
-    Receipt ||--|{ RewardsStatus: has
+    Receipt ||--|| RewardsStatus: has
     Brand }|..|{ ReceiptRewardItem : has
 
     User {
