@@ -12,7 +12,7 @@ erDiagram
     User ||--|| UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|| RewardsStatus: has
-    Brand }|--|{ ReceiptRewardItem : has
+    Brand ||--|{ ReceiptRewardItem : has
 
     User {
         string(255) _id PK
