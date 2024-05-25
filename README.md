@@ -12,7 +12,7 @@ erDiagram
     User ||--|| UserRole: has
     Receipt ||--|{ ReceiptRewardItem : contains
     Receipt ||--|| RewardsStatus: has
-    Brand }|..|{ ReceiptRewardItem : has
+    Brand }|--|{ ReceiptRewardItem : has
 
     User {
         string(255) _id PK
@@ -72,7 +72,7 @@ erDiagram
         String(255) receiptId FK
         String(255) partnerItemId
         String(255) pointsPayerId
-        String(255) userId
+        String(255) userId FK
         timestamp   dateScanned "date the receipt is scanned"
         String(255) rewardsProductPartnerId
         String(255) metabriteCampaignId
@@ -106,5 +106,7 @@ erDiagram
         float priceAfterCoupon
     }
 ```
+
+
 ### 2. All codes and descriptions used to answer part 1 - part 4 are stored in `analysis.ipynb`
 
